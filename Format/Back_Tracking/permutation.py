@@ -4,6 +4,7 @@
 nPm (permutation)
 """
 
+
 def permutation(n: int, m: int, arr: list):
     if len(arr) >= m:
         print(' '.join(map(str, arr)))
@@ -11,6 +12,7 @@ def permutation(n: int, m: int, arr: list):
     for item in range(1, n+1):
         if item not in arr:
             permutation(n, m, arr + [item])
+
 
 n, m = map(int, input().split())
 permutation(n, m, [])
